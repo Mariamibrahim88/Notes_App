@@ -15,7 +15,7 @@ class CustomCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: Text(
+            title: const Text(
               'Flutter tips',
               style: TextStyle(fontSize: 30, color: Colors.black),
             ),
@@ -25,12 +25,12 @@ class CustomCard extends StatelessWidget {
                 'Build your career with tharwat samy',
                 //softWrap: true,
                 style: TextStyle(
-                    color: Colors.black.withOpacity(0.5), fontSize: 25),
+                    color: Colors.black.withOpacity(0.5), fontSize: 20),
               ),
             ),
             trailing: IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.delete,
                 color: Colors.black,
                 size: 30,
