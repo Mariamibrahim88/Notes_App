@@ -6,12 +6,14 @@ void main() {
 }
 
 class NotesApp extends StatelessWidget {
-  const NotesApp({super.key});
+  const NotesApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark().copyWith(
+          //fontFamily: 'Poppins',
+          ),
       debugShowCheckedModeBanner: false,
       home: const NotesView(),
     );
