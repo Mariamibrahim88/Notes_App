@@ -5,11 +5,11 @@ sealed class NoteState {}
 
 class NotesInitial extends NoteState {}
 
-class NoteLoading extends NoteState {}
+class AddNoteLoading extends NoteState {}
 
-class NoteSuccess extends NoteState {}
+class AddNoteSuccess extends NoteState {}
 
-class NoteFailure extends NoteState {
+class AddNoteFailure extends NoteState {
   String errMessage;
-  NoteFailure(this.errMessage);
+  AddNoteFailure(this.errMessage);
 }

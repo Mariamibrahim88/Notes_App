@@ -11,12 +11,12 @@ class AddNoteBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: BlocConsumer<NotesCubit, NoteState>(listener: (context, state) {
-        if (state is NoteSuccess) {
+      create: (context) => AddNotesCubit(),
+      child: BlocConsumer<AddNotesCubit, NoteState>(listener: (context, state) {
+        if (state is AddNoteSuccess) {
           Navigator.pop(context);
         }
-        if (state is NoteFailure) {
+        if (state is AddNoteFailure) {
           //ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(state.errMessage)));
         }
       }, builder: (context, state) {
@@ -25,7 +25,7 @@ class AddNoteBottomSheet extends StatelessWidget {
         //     //state is NoteLoading ? true : false,
         //     child:
         return AbsorbPointer(
-          absorbing: state is NoteLoading ? true : false,
+          absorbing: state is AddNoteLoading ? true : false,
           child: Padding(
             padding: EdgeInsets.only(
                 left: 16.0,
