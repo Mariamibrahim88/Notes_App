@@ -22,4 +22,9 @@ class NotesCubit extends Cubit<NotesState> {
     //   emit(NoteFailure(e.toString()));
     // }
   }
+
+  // deleteNote() {
+  //   var noteBox = Hive.box<NoteModel>(kNotesBox);
+  //   noteBox.delete(key);
+  // }
 }

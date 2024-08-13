@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
+import 'package:notes_app/cubit/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 
 import '../views/edit_notes_view.dart';
@@ -22,7 +24,8 @@ class CustomCard extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(top: 24, left: 24, bottom: 24),
         decoration: BoxDecoration(
-            color: Colors.amber, borderRadius: BorderRadius.circular(20)),
+            color: Color(noteModel.color),
+            borderRadius: BorderRadius.circular(20)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
@@ -41,7 +44,10 @@ class CustomCard extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  // BlocProvider.of<NotesCubit>(context).deleteNote();
+                  noteModel.delete();
+                },
                 icon: const Icon(
                   Icons.delete,
                   color: Colors.black,
