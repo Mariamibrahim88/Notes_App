@@ -45,8 +45,8 @@ class CustomCard extends StatelessWidget {
               ),
               trailing: IconButton(
                 onPressed: () {
-                  // BlocProvider.of<NotesCubit>(context).deleteNote();
                   noteModel.delete();
+                  BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                 },
                 icon: const Icon(
                   Icons.delete,
