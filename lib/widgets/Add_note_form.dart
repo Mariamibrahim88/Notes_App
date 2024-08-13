@@ -46,7 +46,7 @@ class _AddNotesFormStateState extends State<AddNotesFormState> {
           const SizedBox(
             height: 32,
           ),
-          BlocBuilder<AddNotesCubit, NoteState>(
+          BlocBuilder<AddNotesCubit, AddNoteState>(
             builder: (context, state) {
               return CustomButton(
                 isLoading: state is AddNoteLoading ? true : false,

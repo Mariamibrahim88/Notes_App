@@ -13,7 +13,7 @@ class NoteSuccess extends NotesState {
   NoteSuccess(this.notes);
 }
 
-class NoteFailure extends NotesState {
-  String errMessage;
-  NoteFailure(this.errMessage);
-}
+// class NoteFailure extends NotesState {
+//   String errMessage;
+//   NoteFailure(this.errMessage);
+// }
