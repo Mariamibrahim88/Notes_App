@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:notes_app/models/note_model.dart';
 
 import '../views/edit_notes_view.dart';
@@ -51,7 +52,7 @@ class CustomCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Text(
-                noteModel.date,
+                DateFormat.yMMMEd().format(DateTime.parse(noteModel.date)),
                 style: TextStyle(
                     color: Colors.black.withOpacity(0.5), fontSize: 18),
               ),
