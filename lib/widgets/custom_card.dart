@@ -18,7 +18,9 @@ class CustomCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const EditNotes();
+          return EditNotes(
+            note: noteModel,
+          );
         }));
       },
       child: Container(

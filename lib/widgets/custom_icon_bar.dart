@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomIconBar extends StatelessWidget {
-  const CustomIconBar({super.key, required this.icon});
+  CustomIconBar({super.key, required this.icon, this.onTap});
+
   final IconData icon;
+  void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +14,13 @@ class CustomIconBar extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.05),
           borderRadius: BorderRadius.circular(16)),
-      child: Icon(
-        icon,
-        color: Colors.white,
-        size: 30,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Icon(
+          icon,
+          color: Colors.white,
+          size: 30,
+        ),
       ),
     );
   }
